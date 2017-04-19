@@ -5,7 +5,7 @@ php:
 before_script:
   - composer self-update
   - composer install
-	- ./vendor/bin/phpcs --config-set installed_paths ../wp-coding-standards/wpcs/
+  - ./vendor/bin/phpcs --config-set installed_paths ../wp-coding-standards/wpcs/
 
 script:
   - ./vendor/bin/phpcs -p . --standard=WordPress-Extra
