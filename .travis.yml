@@ -6,6 +6,7 @@ before_script:
   - composer self-update
   - composer install
   - ./vendor/bin/phpcs --config-set installed_paths /home/travis/build/Khristophor/wp-plugin-scaffold/vendor/wp-coding-standards/wpcs/
+  - ./vendor/bin/phpcs -i
 
 script:
-  - ./vendor/bin/phpcs -p . --standard=WordPress-Extra
+  - ./vendor/bin/phpcs -p ./plugin-name --standard=WordPress-Extra
